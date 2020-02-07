@@ -41,17 +41,7 @@ class Tramites
     /**
      * @ORM\Column(type="text")
      */
-    private $ComoSeHace;
-
-    /**
-     * @ORM\Column(type="text")
-     */
     private $comoSeHace;
-
-    /**
-     * @ORM\Column(type="text")
-     */
-    private $cuantoVale;
 
     public function getId(): ?int
     {
@@ -114,18 +104,6 @@ class Tramites
     public function setComoSeHace(string $ComoSeHace): self
     {
         $this->ComoSeHace = $ComoSeHace;
-
-        return $this;
-    }
-
-    public function getCuantoVale(): ?string
-    {
-        return $this->cuantoVale;
-    }
-
-    public function setCuantoVale(string $cuantoVale): self
-    {
-        $this->cuantoVale = $cuantoVale;
 
         return $this;
     }
