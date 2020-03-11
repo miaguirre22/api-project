@@ -43,6 +43,41 @@ class Tramites
      */
     private $comoSeHace;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $tieneValor;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $cuantoVale;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $quienPuede;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $vigencia;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $cuantasAsistencias;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $tiempoEntrega;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $dondeRealizarlo;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -104,6 +139,90 @@ class Tramites
     public function setComoSeHace(string $ComoSeHace): self
     {
         $this->ComoSeHace = $ComoSeHace;
+
+        return $this;
+    }
+
+    public function getTieneValor(): ?int
+    {
+        return $this->tieneValor;
+    }
+
+    public function setTieneValor(int $tieneValor): self
+    {
+        $this->tieneValor = $tieneValor;
+
+        return $this;
+    }
+
+    public function getCuantoVale(): ?string
+    {
+        return $this->cuantoVale;
+    }
+
+    public function setCuantoVale(string $cuantoVale): self
+    {
+        $this->cuantoVale = $cuantoVale;
+
+        return $this;
+    }
+
+    public function getQuienPuede(): ?string
+    {
+        return $this->quienPuede;
+    }
+
+    public function setQuienPuede(string $quienPuede): self
+    {
+        $this->quienPuede = $quienPuede;
+
+        return $this;
+    }
+
+    public function getVigencia(): ?string
+    {
+        return $this->vigencia;
+    }
+
+    public function setVigencia(string $vigencia): self
+    {
+        $this->vigencia = $vigencia;
+
+        return $this;
+    }
+
+    public function getCuantasAsistencias(): ?string
+    {
+        return $this->cuantasAsistencias;
+    }
+
+    public function setCuantasAsistencias(string $cuantasAsistencias): self
+    {
+        $this->cuantasAsistencias = $cuantasAsistencias;
+
+        return $this;
+    }
+
+    public function getTiempoEntrega(): ?string
+    {
+        return $this->tiempoEntrega;
+    }
+
+    public function setTiempoEntrega(string $tiempoEntrega): self
+    {
+        $this->tiempoEntrega = $tiempoEntrega;
+
+        return $this;
+    }
+
+    public function getDondeRealizarlo(): ?string
+    {
+        return $this->dondeRealizarlo;
+    }
+
+    public function setDondeRealizarlo(string $dondeRealizarlo): self
+    {
+        $this->dondeRealizarlo = $dondeRealizarlo;
 
         return $this;
     }
