@@ -78,6 +78,21 @@ class Tramites
      */
     private $dondeRealizarlo;
 
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $delegaciones;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $cuandoEsNecesario;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $observaciones;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -223,6 +238,42 @@ class Tramites
     public function setDondeRealizarlo(string $dondeRealizarlo): self
     {
         $this->dondeRealizarlo = $dondeRealizarlo;
+
+        return $this;
+    }
+
+    public function getDelegaciones(): ?string
+    {
+        return $this->delegaciones;
+    }
+
+    public function setDelegaciones(string $delegaciones): self
+    {
+        $this->delegaciones = $delegaciones;
+
+        return $this;
+    }
+
+    public function getCuandoEsNecesario(): ?string
+    {
+        return $this->cuandoEsNecesario;
+    }
+
+    public function setCuandoEsNecesario(string $cuandoEsNecesario): self
+    {
+        $this->cuandoEsNecesario = $cuandoEsNecesario;
+
+        return $this;
+    }
+
+    public function getObservaciones(): ?string
+    {
+        return $this->observaciones;
+    }
+
+    public function setObservaciones(string $observaciones): self
+    {
+        $this->observaciones = $observaciones;
 
         return $this;
     }
