@@ -93,6 +93,12 @@ class Tramites
      */
     private $observaciones;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\TramitesEstados", inversedBy="tramites")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $estado;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -274,6 +280,18 @@ class Tramites
     public function setObservaciones(string $observaciones): self
     {
         $this->observaciones = $observaciones;
+
+        return $this;
+    }
+
+    public function getEstado(): ?TramitesEstados
+    {
+        return $this->estado;
+    }
+
+    public function setEstado(?TramitesEstados $estado): self
+    {
+        $this->estado = $estado;
 
         return $this;
     }
